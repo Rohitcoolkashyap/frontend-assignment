@@ -1,0 +1,132 @@
+.app {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.app-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  color: #fff;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #fff;
+}
+
+.table-container {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 2rem;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: transparent;
+}
+
+th, td {
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  min-width: 44px;
+  min-height: 44px;
+}
+
+th {
+  background: rgba(255, 255, 255, 0.05);
+  font-weight: 500;
+  color: #fff;
+}
+
+tr:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.pagination {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.pagination-nav {
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  padding: 0.5rem 1rem;
+  color: #fff;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-size: 1rem;
+}
+
+.pagination-nav:hover:not(:disabled) {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.pagination-nav:focus:not(:disabled) {
+  outline: 2px solid #3B82F6;
+  outline-offset: 2px;
+}
+
+.pagination-nav:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.current-page {
+  color: #fff;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 6px;
+}
+
+.loading {
+  text-align: center;
+  padding: 2rem;
+  color: #fff;
+}
+
+/* Improve focus visibility */
+:focus {
+  outline: 2px solid #3B82F6;
+  outline-offset: 2px;
+}
+
+/* Add focus styles for interactive elements */
+tr:focus-within {
+  background: rgba(255, 255, 255, 0.1);
+  outline: none;
+}
+
+/* Support for reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+/* High contrast mode support */
+@media (forced-colors: active) {
+  .pagination-nav:disabled {
+    opacity: 1;
+    color: GrayText;
+  }
+  
+  .table-container {
+    border: 1px solid CanvasText;
+  }
+  
+  th, td {
+    border-color: CanvasText;
+  }
+}
